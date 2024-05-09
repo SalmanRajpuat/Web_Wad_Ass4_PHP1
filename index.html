@@ -10,6 +10,27 @@
       src="https://kit.fontawesome.com/0e53af926d.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      window.onload = function() {
+          const params = new URLSearchParams(window.location.search);
+          if (params.get('login') === 'success') {
+              alert('You have successfully logged in.');
+          }
+      };
+  </script>
+
+  <script>
+    window.onload = function() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('status') === 'signed') {
+            alert('You have signed up successfully!');
+        }
+    };
+</script>
+
+
+    
   </head>
   <body>
     <!--header section-->

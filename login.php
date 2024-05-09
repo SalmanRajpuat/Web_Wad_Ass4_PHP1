@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Password is correct, set session variables and redirect to dashboard
             session_start();
             $_SESSION["email"] = $email; // Store user's email in session for future use
-            header('Location: index.html?status=loggedin');
+            header('Location: index.html?login=success');
             exit(); // Ensure that no further code execution occurs after the redirect
         } else {
             // Password is incorrect

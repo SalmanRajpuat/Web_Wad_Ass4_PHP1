@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         
         // After account creation
-        header('Location: index.html?status=success');
+        header('Location: index.html?status=signed');
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

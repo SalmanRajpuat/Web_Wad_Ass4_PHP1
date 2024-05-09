@@ -6,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="login.css">
-
-<script src="login.js"></script>
-
+    <script src="login.js"></script>
 </head>
 
 <body>
     <p class="tip"> *TIP Click on button in image container</p>
     <div class="cont">
-        <div class="form sign-in">
+        <!-- Sign-In Form -->
+        <form class="form sign-in" action="login.php" method="POST">
             <h2>Welcome back,</h2>
             <label>
                 <span>Email</span>
-                <input type="email" id="em" />
+                <input type="email" id="em" name="email" required />
             </label>
             <label>
                 <span>Password</span>
-                <input type="password" id="pass" />
+                <input type="password" id="pass" name="password" required />
             </label>
             <p class="forgot-pass">Forgot password?</p>
-            <button type="button" id="btns" class="submit">Sign In</button>
+            <button type="submit" id="btns" class="submit">Sign In</button>
             <button type="button" class="fb-btn">Connect with <span>facebook</span></button>
-        </div>
+        </form>
+
+        <!-- Image and toggle container -->
         <div class="sub-cont">
             <div class="img">
                 <div class="img__text m--up">
@@ -43,23 +44,25 @@
                     <span class="m--in">Sign In</span>
                 </div>
             </div>
-            <div class="form sign-up">
+            
+            <!-- Sign-Up Form -->
+            <form action="signup.php" method="POST">
                 <h2>Time to feel like home,</h2>
                 <label>
                     <span>Name</span>
-                    <input type="text" />
+                    <input type="text" name="name" required />
                 </label>
                 <label>
                     <span>Email</span>
-                    <input type="email" />
+                    <input type="email" name="email" required />
                 </label>
                 <label>
                     <span>Password</span>
-                    <input type="password" />
+                    <input type="password" name="password" required />
                 </label>
-                <button type="button" class="submit">Sign Up</button>
+                <button type="submit" class="submit">Sign Up</button>
                 <button type="button" class="fb-btn">Join with <span>facebook</span></button>
-            </div>
+            </form>
         </div>
     </div>
 
